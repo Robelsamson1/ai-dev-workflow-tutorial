@@ -65,13 +65,14 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-1: Environment setup and project initialization
 Set up the Python environment, dependencies and project structure for the dashboard (PRD M1).
 
-- [ ] Python 3.11+ environment created, with Streamlit, Plotly and Pandas listed in `requirements.txt` and installed
-- [ ] Project structure in place, including `app.py` and a `data/` folder containing `sales-data.csv`
-- [ ] `streamlit run app.py` starts and shows a placeholder page without errors
+- [x] Python 3.11+ environment created, with Streamlit, Plotly and Pandas listed in `requirements.txt` and installed
+- [x] Project structure in place, including `app.py` and a `data/` folder containing `sales-data.csv`
+- [x] `streamlit run app.py` starts and shows a placeholder page without errors
 
-Commit:
-
-## Done
+Commit: e659985
+Notes: Plan step A.7 still listed the design doc and plan, which were already committed, so only the new files were staged. Otherwise clean.
