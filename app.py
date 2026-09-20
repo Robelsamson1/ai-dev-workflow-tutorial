@@ -29,4 +29,7 @@ except data.DataError as error:
     st.error(str(error))
     st.stop()
 
-st.info("Data loaded. Charts are coming in the next milestones.")
+# KPI cards: the two headline numbers.
+total_sales_col, total_orders_col = st.columns(2)
+total_sales_col.metric("Total Sales", f"${data.total_sales(sales):,.0f}")
+total_orders_col.metric("Total Orders", f"{data.total_orders(sales):,}")

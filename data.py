@@ -52,3 +52,13 @@ def load_sales(path):
             raise DataError(f"Column '{column}' has blank or invalid values.")
 
     return df
+
+
+def total_sales(df):
+    """Total revenue: the sum of every order's total_amount."""
+    return float(df["total_amount"].sum())
+
+
+def total_orders(df):
+    """Number of distinct orders."""
+    return int(df["order_id"].nunique())
