@@ -22,40 +22,6 @@ Commit:
 
 ## In Progress
 
-### TASK-2: Data loading and basic structure
-Load and validate `data/sales-data.csv` with Pandas and lay out the modular app structure (PRD M2, FR-5).
-
-- [ ] CSV loads with correct types: `date` as a date, numeric columns as numbers, the rest as categories or strings
-- [ ] The loaded data has 482 records, 5 categories and 4 regions
-- [ ] The CSV structure is validated before use, with a clear error message if columns are missing (data quality risk)
-
-Commit:
-
-### TASK-3: KPI cards
-Show Total Sales and Total Orders as prominent KPI cards (PRD M3, FR-1).
-
-- [ ] Total Sales is displayed as currency (`$X,XXX,XXX` style) and is about $116,500 for the sample data
-- [ ] Total Orders is displayed with number separators and equals 482
-
-Commit:
-
-### TASK-4: Sales trend chart
-Add an interactive line chart of sales over time (PRD M4, FR-2).
-
-- [ ] Line chart shows sales by day or month, with time on the X-axis and sales amount on the Y-axis
-- [ ] Tooltips show exact values, and the chart has clear titles and axis labels
-
-Commit:
-
-### TASK-5: Category and region breakdowns
-Add bar charts for sales by product category and by region (PRD M5, FR-3 and FR-4).
-
-- [ ] Category bar chart shows all 5 categories, sorted highest to lowest, with Electronics on top
-- [ ] Region bar chart shows all 4 regions (North, South, East, West), sorted highest to lowest
-- [ ] Both charts have interactive tooltips with exact values and are laid out side by side below the trend chart
-
-Commit:
-
 ## Done
 
 ### TASK-1: Environment setup and project initialization
@@ -67,6 +33,44 @@ Set up the Python environment, dependencies and project structure for the dashbo
 
 Commit: e659985
 Notes: Plan step A.7 still listed the design doc and plan, which were already committed, so only the new files were staged. Otherwise clean.
+
+### TASK-2: Data loading and basic structure
+Load and validate `data/sales-data.csv` with Pandas and lay out the modular app structure (PRD M2, FR-5).
+
+- [x] CSV loads with correct types: `date` as a date, numeric columns as numbers, the rest as categories or strings
+- [x] The loaded data has 482 records, 5 categories and 4 regions
+- [x] The CSV structure is validated before use, with a clear error message if columns are missing (data quality risk)
+
+Commit: 4bba0ff
+Notes: clean
+
+### TASK-3: KPI cards
+Show Total Sales and Total Orders as prominent KPI cards (PRD M3, FR-1).
+
+- [x] Total Sales is displayed as currency (`$X,XXX,XXX` style) and is about $116,500 for the sample data
+- [x] Total Orders is displayed with number separators and equals 482
+
+Commit: a5f2fd7
+Notes: clean
+
+### TASK-4: Sales trend chart
+Add an interactive line chart of sales over time (PRD M4, FR-2).
+
+- [x] Line chart shows sales by day or month, with time on the X-axis and sales amount on the Y-axis
+- [x] Tooltips show exact values, and the chart has clear titles and axis labels
+
+Commit: 54c213d
+Notes: clean
+
+### TASK-5: Category and region breakdowns
+Add bar charts for sales by product category and by region (PRD M5, FR-3 and FR-4).
+
+- [x] Category bar chart shows all 5 categories, sorted highest to lowest, with Electronics on top
+- [x] Region bar chart shows all 4 regions (North, South, East, West), sorted highest to lowest
+- [x] Both charts have interactive tooltips with exact values and are laid out side by side below the trend chart
+
+Commit: e07165f
+Notes: clean
 
 ### TASK-6: Testing and refinement
 Verify the numbers, polish the appearance and check performance and browser compatibility (PRD M6).
