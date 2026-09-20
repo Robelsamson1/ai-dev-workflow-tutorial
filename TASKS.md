@@ -12,6 +12,16 @@ Before any milestone moves to Done, all of the following must be true:
 
 ## To Do
 
+### TASK-7: Deployment to Streamlit Community Cloud
+Publish the dashboard to a public shareable URL for stakeholder review (PRD M7, NFR-5).
+
+- [ ] Repository is pushed to GitHub and the app is deployed on Streamlit Community Cloud
+- [ ] The public URL loads the full dashboard without errors, and the link is recorded in the project README
+
+Commit:
+
+## In Progress
+
 ### TASK-2: Data loading and basic structure
 Load and validate `data/sales-data.csv` with Pandas and lay out the modular app structure (PRD M2, FR-5).
 
@@ -46,25 +56,6 @@ Add bar charts for sales by product category and by region (PRD M5, FR-3 and FR-
 
 Commit:
 
-### TASK-6: Testing and refinement
-Verify the numbers, polish the appearance and check performance and browser compatibility (PRD M6).
-
-- [ ] All displayed values match independent calculations from the CSV, and the app runs with no errors or warnings
-- [ ] Dashboard loads in under 5 seconds and looks professional enough for an executive presentation (clear labels, consistent styling)
-- [ ] Checked in at least two modern browsers (e.g. Chrome and Firefox), with code commented and cleanly organized
-
-Commit:
-
-### TASK-7: Deployment to Streamlit Community Cloud
-Publish the dashboard to a public shareable URL for stakeholder review (PRD M7, NFR-5).
-
-- [ ] Repository is pushed to GitHub and the app is deployed on Streamlit Community Cloud
-- [ ] The public URL loads the full dashboard without errors, and the link is recorded in the project README
-
-Commit:
-
-## In Progress
-
 ## Done
 
 ### TASK-1: Environment setup and project initialization
@@ -76,3 +67,13 @@ Set up the Python environment, dependencies and project structure for the dashbo
 
 Commit: e659985
 Notes: Plan step A.7 still listed the design doc and plan, which were already committed, so only the new files were staged. Otherwise clean.
+
+### TASK-6: Testing and refinement
+Verify the numbers, polish the appearance and check performance and browser compatibility (PRD M6).
+
+- [x] All displayed values match independent calculations from the CSV, and the app runs with no errors or warnings
+- [x] Dashboard loads in under 5 seconds and looks professional enough for an executive presentation (clear labels, consistent styling)
+- [x] Checked in at least two modern browsers (e.g. Chrome and Firefox), with code commented and cleanly organized
+
+Commit: 6312632
+Notes: clean
