@@ -12,14 +12,6 @@ Before any milestone moves to Done, all of the following must be true:
 
 ## To Do
 
-### TASK-7: Deployment to Streamlit Community Cloud
-Publish the dashboard to a public shareable URL for stakeholder review (PRD M7, NFR-5).
-
-- [ ] Repository is pushed to GitHub and the app is deployed on Streamlit Community Cloud
-- [ ] The public URL loads the full dashboard without errors, and the link is recorded in the project README
-
-Commit:
-
 ## In Progress
 
 ## Done
@@ -81,3 +73,13 @@ Verify the numbers, polish the appearance and check performance and browser comp
 
 Commit: 6312632
 Notes: Code review (`/code-review`) of `feature/sales-dashboard` was completed after the milestone checks and its 9 findings were reviewed. All are deferred: they concern robustness for malformed or future data (non-UTF-8 or malformed CSVs escaping `DataError`, blank/`inf`/negative values and duplicate `order_id` rows passing validation, a stale `st.cache_data` cache, months with no sales skipped in the trend) plus one commit-message convention miss. None affects the current PRD dataset or dashboard, and no code was changed.
+
+### TASK-7: Deployment to Streamlit Community Cloud
+Publish the dashboard to a public shareable URL for stakeholder review (PRD M7, NFR-5).
+
+- [x] Repository is pushed to GitHub and the app is deployed on Streamlit Community Cloud
+- [x] The public URL loads the full dashboard without errors, and the link is recorded in the project README
+
+Live URL: https://ai-dev-workflow-tutorial-bywtzcyr9a9qgmcj4f6ztc.streamlit.app/
+Commit: 6c3797c
+Notes: clean
