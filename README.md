@@ -2,6 +2,8 @@
 
 This tutorial teaches you a professional development workflow by having you build and deploy a real project: an e-commerce sales dashboard.
 
+**Live dashboard:** https://ai-dev-workflow-tutorial-bywtzcyr9a9qgmcj4f6ztc.streamlit.app/
+
 You'll work through it in two parts:
 
 | Part | What you do | Time |
