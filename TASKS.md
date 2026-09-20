@@ -12,15 +12,6 @@ Before any milestone moves to Done, all of the following must be true:
 
 ## To Do
 
-### TASK-1: Environment setup and project initialization
-Set up the Python environment, dependencies and project structure for the dashboard (PRD M1).
-
-- [ ] Python 3.11+ environment created, with Streamlit, Plotly and Pandas listed in `requirements.txt` and installed
-- [ ] Project structure in place, including `app.py` and a `data/` folder containing `sales-data.csv`
-- [ ] `streamlit run app.py` starts and shows a placeholder page without errors
-
-Commit:
-
 ### TASK-2: Data loading and basic structure
 Load and validate `data/sales-data.csv` with Pandas and lay out the modular app structure (PRD M2, FR-5).
 
@@ -73,5 +64,14 @@ Publish the dashboard to a public shareable URL for stakeholder review (PRD M7, 
 Commit:
 
 ## In Progress
+
+### TASK-1: Environment setup and project initialization
+Set up the Python environment, dependencies and project structure for the dashboard (PRD M1).
+
+- [ ] Python 3.11+ environment created, with Streamlit, Plotly and Pandas listed in `requirements.txt` and installed
+- [ ] Project structure in place, including `app.py` and a `data/` folder containing `sales-data.csv`
+- [ ] `streamlit run app.py` starts and shows a placeholder page without errors
+
+Commit:
 
 ## Done
