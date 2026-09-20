@@ -62,3 +62,14 @@ def total_sales(df):
 def total_orders(df):
     """Number of distinct orders."""
     return int(df["order_id"].nunique())
+
+
+def monthly_sales(df):
+    """Sales per month, oldest first. Columns: month (first day of month), sales."""
+    with_month = df.assign(month=df["date"].dt.to_period("M").dt.to_timestamp())
+    return (
+        with_month.groupby("month", as_index=False)["total_amount"]
+        .sum()
+        .rename(columns={"total_amount": "sales"})
+    )
+

@@ -118,3 +118,23 @@ def test_real_data_kpis_match_prd():
     df = data.load_sales(REAL_CSV)
     assert data.total_sales(df) == pytest.approx(116500.21, abs=0.01)
     assert data.total_orders(df) == 482
+
+
+# ---- monthly trend ----
+
+
+def test_monthly_sales_one_row_per_month_oldest_first(sample_sales):
+    result = data.monthly_sales(sample_sales)
+    assert list(result["month"]) == [
+        pd.Timestamp("2024-01-01"),
+        pd.Timestamp("2024-02-01"),
+    ]
+    assert list(result["sales"]) == pytest.approx([250.0, 230.0])
+
+
+def test_real_data_has_twelve_months_that_add_up_to_the_total():
+    df = data.load_sales(REAL_CSV)
+    result = data.monthly_sales(df)
+    assert len(result) == 12
+    assert result["sales"].sum() == pytest.approx(data.total_sales(df))
+
