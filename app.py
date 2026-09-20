@@ -54,3 +54,31 @@ trend_chart.update_xaxes(tickformat="%b %Y")
 trend_chart.update_yaxes(tickprefix="$", tickformat=",")
 st.plotly_chart(trend_chart)
 
+
+def bar_chart(table, label_column, title):
+    """Horizontal bar chart of sales, with the biggest bar on top."""
+    chart = px.bar(
+        table,
+        x="sales",
+        y=label_column,
+        orientation="h",
+        title=title,
+        labels={"sales": "Sales ($)", label_column: label_column.title()},
+    )
+    chart.update_traces(
+        marker_color=ACCENT,
+        hovertemplate="%{y}<br>$%{x:,.2f}<extra></extra>",
+    )
+    chart.update_yaxes(categoryorder="total ascending")  # largest bar at the top
+    chart.update_xaxes(tickprefix="$", tickformat=",")
+    return chart
+
+
+# Category and region breakdowns, side by side.
+category_col, region_col = st.columns(2)
+category_col.plotly_chart(
+    bar_chart(data.sales_by_category(sales), "category", "Sales by Category")
+)
+region_col.plotly_chart(
+    bar_chart(data.sales_by_region(sales), "region", "Sales by Region")
+)

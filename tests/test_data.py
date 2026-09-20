@@ -138,3 +138,29 @@ def test_real_data_has_twelve_months_that_add_up_to_the_total():
     assert len(result) == 12
     assert result["sales"].sum() == pytest.approx(data.total_sales(df))
 
+
+# ---- category and region breakdowns ----
+
+
+def test_sales_by_category_sorted_highest_first(sample_sales):
+    result = data.sales_by_category(sample_sales)
+    assert list(result["category"]) == ["Audio", "Wearables", "Accessories"]
+    assert list(result["sales"]) == pytest.approx([250.0, 200.0, 30.0])
+
+
+def test_sales_by_region_sorted_highest_first(sample_sales):
+    result = data.sales_by_region(sample_sales)
+    assert list(result["region"]) == ["North", "South"]
+    assert list(result["sales"]) == pytest.approx([380.0, 100.0])
+
+
+def test_real_data_categories_and_regions():
+    df = data.load_sales(REAL_CSV)
+
+    categories = data.sales_by_category(df)
+    assert len(categories) == 5
+    assert categories["category"].iloc[0] == "Electronics"
+
+    regions = data.sales_by_region(df)
+    assert len(regions) == 4
+    assert regions["region"].iloc[0] == "North"
