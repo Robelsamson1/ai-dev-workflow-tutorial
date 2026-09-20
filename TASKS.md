@@ -80,4 +80,4 @@ Verify the numbers, polish the appearance and check performance and browser comp
 - [x] Checked in at least two modern browsers (e.g. Chrome and Firefox), with code commented and cleanly organized
 
 Commit: 6312632
-Notes: clean
+Notes: Code review (`/code-review`) of `feature/sales-dashboard` was completed after the milestone checks and its 9 findings were reviewed. All are deferred: they concern robustness for malformed or future data (non-UTF-8 or malformed CSVs escaping `DataError`, blank/`inf`/negative values and duplicate `order_id` rows passing validation, a stale `st.cache_data` cache, months with no sales skipped in the trend) plus one commit-message convention miss. None affects the current PRD dataset or dashboard, and no code was changed.
